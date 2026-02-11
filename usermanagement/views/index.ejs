@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Management</title>
+    <link rel="stylesheet" href="/css/look.css">
+</head>
+<body>
+
+<section id="header">
+    <nav>
+        <div class="container text-center">
+            <a href="/" class="nav-brand">USER MANAGEMENT SYSTEM</a>
+        </div>
+    </nav>
+</section>
+
+
+<section id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/adduser" class="btn">Add User</a>
+        </div>
+
+        <table class="table border-shadow">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(users){ users.forEach(function(user){ %>
+                <tr>
+                    <td><%= user.name %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.gender %></td>
+                    <td><%= user.status %></td>
+                    <td>
+                        <a href="/updateuser?id=<%= user._id %>" class="btn">Edit</a>
+                        <a href="#" class="btn delete" data-id="<%= user._id %>">Delete</a>
+                    </td>
+                </tr>
+                <% }) } %>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/index.js"></script>
+
+</body>
+</html>

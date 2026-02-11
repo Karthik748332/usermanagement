@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Barlow&display=swap');
+
+:root{
+    --dark:#1e293b;           /* Dark navy */
+    --light:#64748b;
+    --border:#e2e8f0;
+    --border-btn:#cbd5e1;
+    --primary:#2563eb;        /* Professional blue */
+    --hover:#1d4ed8;
+    --background:#f1f5f9;     /* Page background */
+    --white:#ffffff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'PT Sans', sans-serif;
+    background-color: var(--background);
+}
+
+a{
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.container{
+    max-width: 1024px;
+    margin: auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.border-shadow{
+    border: 1px solid var(--border-btn);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.text-dark{
+    color: var(--dark);
+}
+
+.text-light{
+    color: var(--white);
+}
+
+/* ================= HEADER ================= */
+
+/* ================= HEADER ================= */
+
+#header nav{
+    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+    padding: 1.5em 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-brand{
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    display: inline-block;
+}
+
+/* ================= MAIN SECTION ================= */
+
+#site-main{
+    margin-top: 4em;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* ================= TABLE ================= */
+
+table{
+    border-spacing: 0px;
+    width: 100%;
+    background: var(--white);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.table td, .table th{
+    padding: 1em;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.table tr:hover{
+    background-color: #e0ecff;
+}
+
+.table .thead-dark th{
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+/* ================= FORM ================= */
+
+.form-title{
+    margin: 2em 0 1em;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.new_user{
+    max-width: 700px;
+    margin: auto;
+    background: var(--white);
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+#update_user .form-group,
+#add_user .form-group{
+    margin: 1em 0;
+}
+
+#update_user .form-group input[type="text"],
+#add_user .form-group input[type="text"],
+#update_user .form-group input[type="email"],
+#add_user .form-group input[type="email"]{
+    width: 100%;
+    padding: .8em 1em;
+    margin-top: .5em;
+    border: 1px solid var(--border);
+    border-radius: .4em;
+    transition: 0.3s;
+}
+
+#update_user .form-group input:focus,
+#add_user .form-group input:focus{
+    border-color: var(--primary);
+    outline: none;
+}
+
+/* ================= RADIO BUTTONS ================= */
+
+.radio{
+    margin: 1em 0;
+}
+
+.radio input[type='radio']{
+    margin-right: 6px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
+    display: inline-block;
+    padding: .8em 1.2em;
+    background-color: var(--primary);
+    border: none;
+    border-radius: .4em;
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.btn:hover{
+    background-color: var(--hover);
+}
+
+/* Form Buttons Full Width */
+#update_user .form-group .btn,
+#add_user .form-group .btn{
+    width: 100%;
+}
